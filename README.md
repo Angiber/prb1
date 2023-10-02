@@ -1,7 +1,7 @@
 # prb1
 # Prueba Final Tratamiento de Datos
 
-Extraer datos de la página http://quotes.toscrape.com/, almacenarlos en una base de datos y visualizar mediante Flask
+Extraer datos de la página http://quotes.toscrape.com/, almacenarlos en una base de datos y visualizar
 
 ### Paso 1:
 
@@ -32,5 +32,3 @@ python3 prueba.py
 
 Chequear los resultados en MongoDB
 ![img.png](img.png)
-
-## Esquema de ejecución
