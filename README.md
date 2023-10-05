@@ -8,9 +8,8 @@ Extraer datos de la página http://quotes.toscrape.com/, almacenarlos en una bas
 Crear un archivo `.env` para confidencialidad de usuarios y contraseñas
 
 commandline
-MONGO_USER=username # remplace con su usuario
-MONGO_PASSWORD=password # remplace con su contraseña
-MONGO_HOST=cluster0.patata.mongodb.net # remplace con su host
+mongo_user=username # remplace con su usuario
+mongo_passw=password # remplace con su contraseña
 
 ### Paso 2:
 
@@ -31,4 +30,9 @@ python3 prueba.py
 ## Paso 4
 
 Chequear los resultados en MongoDB
-![img.png](img.png)
+![img_2.png](img_2.png)
+
+## Paso 5
+
+Chequear los datos obtenidos de la base de datos y visualizados mediante flask
+![img_3.png](img_3.png)

@@ -5,7 +5,12 @@ from flask import Flask
 from selenium import webdriver
 from pymongo import MongoClient
 from bson.json_util import dumps
+from  dotenv import load_dotenv
+import os
 
+load_dotenv()
+user= os.getenv('mongo_user')
+password= os.getenv('mongo_passw')
 
 driver = webdriver.Chrome()
 
@@ -33,7 +38,7 @@ driver.quit()
 
 
 # Conexión a la base de datos
-url = "mongodb+srv://Angela:Angie123@cluster0.lik93ug.mongodb.net/?retryWrites=true&w=majority"
+url = f"mongodb+srv://{user}:{password}@cluster0.lik93ug.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(url)
 db = client["prueba"]
 collection = db["Angela"]
@@ -45,13 +50,13 @@ with open('quotes.json', 'r') as f:
 collection.insert_one(data)
 
 app = Flask(__name__)
-MONGO_URI = "mongodb+srv://Angela:Angie123@cluster0.lik93ug.mongodb.net/?retryWrites=true&w=majority"
+MONGO_URI = f"mongodb+srv://{user}:{password}@cluster0.lik93ug.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(MONGO_URI)
 
 
 @app.route('/')
 def home():
-    url = "mongodb+srv://Angela:Angie123@cluster0.lik93ug.mongodb.net/?retryWrites=true&w=majority"
+    url = f"mongodb+srv://{user}:{password}@cluster0.lik93ug.mongodb.net/?retryWrites=true&w=majority"
     cliente = MongoClient(url)
     db = cliente["prueba"]
     collections = db["Angela"]

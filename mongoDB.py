@@ -16,4 +16,3 @@ try:
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
-client.get_database('prueba2').get_collection('Angela').insert_one(document={"marca": "opel", "modelo": "omega"})
