@@ -1,4 +1,3 @@
-# prb1
 # Prueba Final Tratamiento de Datos
 
 Extraer datos de la página http://quotes.toscrape.com/, almacenarlos en una base de datos y visualizar
@@ -7,25 +6,25 @@ Extraer datos de la página http://quotes.toscrape.com/, almacenarlos en una bas
 
 Crear un archivo `.env` para confidencialidad de usuarios y contraseñas
 
-commandline
+```commandline
 mongo_user=username # remplace con su usuario
 mongo_passw=password # remplace con su contraseña
-
+```
 ### Paso 2:
 
 Instalar las librerías necesarias
 
-commandline
+```commandline
 pip install -r requirements
-
+```
 
 ### Paso 3
 
 Ejecutar `prueba.py`
 
-commandline
+```commandline
 python3 prueba.py
-
+```
 
 ## Paso 4
 
